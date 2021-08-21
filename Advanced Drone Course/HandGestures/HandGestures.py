@@ -46,6 +46,7 @@ while True:
                     gesture = " Victory"
                 elif fingers == [0, 0, 0, 0, 1]:
                     gesture = "  Pinky"
+
                 elif fingers == [1, 0, 0, 0, 0]:
                     gesture = "  Thumb"
 
