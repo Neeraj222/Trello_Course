@@ -42,36 +42,26 @@ while True:
 
                 fingers = detectorHand.fingersUp()
                 # print(fingers)
+
                 if fingers == [1, 1, 1, 1, 1]:
-                    gesture = "  Open"
+                    gesture = " Open Hand"
                     me.flip_left()
 
                 elif fingers == [0, 1, 0, 0, 0]:
-                    gesture = "  Index"
-                    me.flip_back()
-
-                elif fingers == [0, 0, 0, 0, 0]:
-                    gesture = "  Fist"
-                    me.flip_forward()
-
-                elif fingers == [0, 0, 1, 0, 0]:
-                    gesture = "  Middle"
-                    me.flip_right()
+                    gesture = "  UP"
 
                 elif fingers == [1, 1, 0, 0, 1]:
-                    gesture = "SpiderMan"
-                    me.land()
+                    gesture = " Spider Man"
 
                 elif fingers == [0, 1, 1, 0, 0]:
-                    gesture = " Victory"
+                    gesture = " Middle Finger"
 
                 elif fingers == [0, 0, 0, 0, 1]:
-                    gesture = "  Pinky"
-                    me.move_back(50)
+                    gesture = "  Index Finger"
 
                 elif fingers == [1, 0, 0, 0, 0]:
-                    gesture = "  Thumb"
-                    me.move_left(50)
+                    gesture = "  Victory"
+
 
                 cv2.rectangle(img, (bboxRegion[0], bboxRegion[1] + bboxRegion[3] + 10),
                               (bboxRegion[0] + bboxRegion[2], bboxRegion[1] + bboxRegion[3] + 60),
