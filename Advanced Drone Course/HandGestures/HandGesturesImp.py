@@ -46,21 +46,24 @@ while True:
                 if fingers == [1, 1, 1, 1, 1]:
                     gesture = " Open Hand"
                     me.flip_left()
+                    me.move_right()
 
                 elif fingers == [0, 1, 0, 0, 0]:
-                    gesture = "  UP"
+                    gesture = "Fist"
 
                 elif fingers == [1, 1, 0, 0, 1]:
                     gesture = " Spider Man"
+                    me.flip_back()
+                    me.flip_forward()
 
                 elif fingers == [0, 1, 1, 0, 0]:
                     gesture = " Middle Finger"
 
                 elif fingers == [0, 0, 0, 0, 1]:
-                    gesture = "  Index Finger"
+                    gesture = "Index"
 
                 elif fingers == [1, 0, 0, 0, 0]:
-                    gesture = "  Victory"
+                    gesture = "Thumb"
 
 
                 cv2.rectangle(img, (bboxRegion[0], bboxRegion[1] + bboxRegion[3] + 10),
